@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <link
+  rel="icon"
+  type="image/svg"
+  img src="./logos/buzzfeed.svg" />
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/18c3b54efc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body-back">
+
+    <div class="container mt-5">
+        <h1 class="text-center text-light">Weather Information</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="cityInput" class="form-control" placeholder="Enter a city">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="searchButton">Search</button>
+                
+            </div>
+        </div>
+
+
+
+        <!-- Weather Card -->
+        <div class="card mx-auto" style="max-width: 400px; display: none; border: none;" id="weatherCard">
+            <div class="card-header bg-primary text-white text-center">
+                Weather in <b><span id="cityName"></span></b>
+            </div>
+            <div class="card-body">
+                <!-- Weather Icon -->
+                <img src="" alt="Weather Icon" class="img-fluid mx-auto d-block" id="weatherIcon">
+
+                <!-- Temperature -->
+                <h2 class="text-center" id="temperature"></h2>
+
+                <!-- Weather Description -->
+                <p class="text-center" id="weatherDescription"></p>
+
+                <!-- Additional Weather Information (e.g., Humidity, Wind, etc.) -->
+                <ul class="list-group">
+                    <li class="list-group-item">Humidity: <span id="humidity"></span></li>
+                    <li class="list-group-item">Wind: <span id="wind"></span></li>
+                    <!-- Add more information as needed -->
+                </ul>
+            </div>
+            <img src="2.png" class="img-fluid mx-auto d-block rounded mb-3" id="weather_Image" width="200" height="200">
+            <div class="card-footer text-center bg-primary text-white">
+                Weather.info
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="alert-box">
+            <span class="close-btn" onclick="closeAlert()">&times;</span>
+            <h2>Oops...! <i class="fa-regular fa-face-frown-open"></i></i></h2>
+            <p>The city you entered could not be found.</p>
+            <button class="btn btn-primary" onclick="closeAlert()">Close</button>
+        </div>
+    </div>
+
+    
+
+
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- JavaScript for City Search and Weather API -->
+    <script src="script.js"></script>
+</body>
+</html>
