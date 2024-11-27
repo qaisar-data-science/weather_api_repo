@@ -46,6 +46,9 @@ function fetchWeather() {
             else if(data.weather[0].description == 'overcast clouds'){
                 image.src = "clouds.gif"
             }
+            else if(data.weather[0].description == 'fog'){
+                image.src = "fog.gif"
+            }
             document.getElementById("humidity").textContent = data.main.humidity + "%";
             document.getElementById("wind").textContent = data.wind.speed + " m/s";
             //overcast clouds
