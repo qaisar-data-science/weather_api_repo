@@ -3,14 +3,14 @@
     
 }
 body{
-    background-image: url('pics/2.jpg');
+    background-image: url('2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 @media screen and (max-width: 412px) {
     body{
-    background-image: url('pics/3.jpg');
+    background-image: url('3.jpg');
     }
     .alert-box{
         width: 380px;
